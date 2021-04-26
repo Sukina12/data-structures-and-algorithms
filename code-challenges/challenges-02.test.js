@@ -23,8 +23,10 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+
   let newArray = [];
   arr.map((value) => {
+
     newArray.push(value+1);
   });
   return newArray;
@@ -37,8 +39,10 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let newArray = [];
-  arr.map((value) => {
+
+  let newArray =[];
+  arr.map((value) =>{
+
     newArray.push(value+'?');
   });
   return newArray;
@@ -55,10 +59,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  let newArray = [];
-  for(let i=0; i<arr.length; i++)
-  {
-    newArray.push(Math.pow(2,arr[i]));
+
+  let newArray =[];
+  for (let index=0; index<arr.length; index++){
+    newArray.push(Math.pow(2,arr[index]));
+
   }
   return newArray;
 };
@@ -70,8 +75,10 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  let newArray = [];
-  arr.forEach((value) => {
+
+  let newArray =[];
+  arr.forEach((value) =>{
+
     newArray.push(Math.pow(2,value));
   });
   return newArray;
@@ -84,7 +91,13 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+
+  let newArray =[];
+  arr.map((value) =>{
+    newArray.push(Math.pow(2,value));
+  });
+  return newArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,7 +114,7 @@ const charCode = (arr) => {
   // Solution code here...
 };
 
-/* ------------------------------------------------------------------------------------------------
+
 CHALLENGE 8 - Stretch Goal
 
 Write a function that, given an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
@@ -299,7 +312,9 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
+
 xdescribe('Testing challenge 9', () => {
+
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
