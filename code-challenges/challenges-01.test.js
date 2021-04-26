@@ -17,7 +17,6 @@ const addOne = (arr) => {
   });
   return newArray;
 };
-console.log(addOne([1,2,3]));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,9 +144,19 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-// const fizzbuzz = (arr) => {
-  
-// };
+const fizzbuzz = (arr) => {
+  let newArray = [];
+  arr.forEach(number => {
+    if (number % 3 === 0 && number % 5 !== 0)
+      newArray.push('Fizz');
+    else if (number % 5 === 0 && number % 3 !== 0)
+      newArray.push('Buzz');
+    else if (number % 3 === 0 && number % 5 === 0)
+      newArray.push('Fizz Buzz');
+    else newArray.push(number);
+  });
+  return newArray;
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -200,7 +209,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
