@@ -23,9 +23,8 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let newArray = [];
-  arr.map((value) => {
-    newArray.push(value + 1);
+  let newArray = arr.map((value) => {
+    return (value + 1);
   });
   return newArray;
 };
@@ -37,9 +36,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  let newArray = [];
-  arr.map((value) => {
-    newArray.push(value + '?');
+  let newArray = arr.map((value) => {
+    return (value + '?');
   });
   return newArray;
 };
@@ -60,6 +58,8 @@ const forLoopTwoToThe = (arr) => {
     newArray.push(Math.pow(2, arr[index]));
   }
   return newArray;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
